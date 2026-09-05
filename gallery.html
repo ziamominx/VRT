@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Gallery — ARJUNA and the Vanguard Racing Team on the terrain.">
+<meta name="theme-color" content="#08080a">
+<title>Gallery — Vanguard Racing Team</title>
+<link rel="icon" href="views/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Space+Grotesk:wght@400;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-logo">
+    <img src="views/vrt-logo.png" alt="Vanguard Racing Team logo">
+    <div class="preloader-script">Racing Team</div>
+  </div>
+  <div class="preloader-meta">
+    <div class="preloader-pct"><span id="preloaderPct">0</span><b>%</b></div>
+    <div class="preloader-bar"><span id="preloaderFill"></span></div>
+  </div>
+</div>
+
+<div class="cur-dot" id="curDot" aria-hidden="true"></div>
+<div class="cur-ring" id="curRing" aria-hidden="true"></div>
+<div class="cur-label" id="curLabel" aria-hidden="true"><span class="txt">View</span></div>
+
+<header class="site-header">
+  <a class="logo" href="index.html" data-mag>
+    <img class="pce-mark" src="views/pce-crest.png" alt="Pillai College of Engineering crest" width="22">
+    <img class="vrt-mark" src="views/vrt-logo.png" alt="Vanguard Racing Team logo">
+    <span class="logo-text"><em>Racing Team</em></span>
+  </a>
+  <nav class="main-nav" aria-label="Primary">
+    <a href="index.html" data-mag>Home</a>
+    <a href="about.html" data-mag>About</a>
+    <a href="index.html#departments" data-mag>Departments</a>
+    <a href="events.html" data-mag>Events</a>
+    <a href="contact.html" data-mag>Contact</a>
+    <a href="recruitment.html" data-mag class="nav-cta">Join</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="index.html" data-mag><small>01</small> Home</a>
+  <a href="about.html" data-mag><small>02</small> About</a>
+  <a href="index.html#departments" data-mag><small>03</small> Departments</a>
+  <a href="gallery.html" data-mag><small>04</small> Gallery</a>
+  <a href="events.html" data-mag><small>05</small> Events</a>
+  <a href="sponsors.html" data-mag><small>06</small> Sponsors</a>
+  <a href="contact.html" data-mag><small>07</small> Contact</a>
+  <a href="recruitment.html" data-mag><small>08</small> Join us</a>
+  <div class="mobile-menu-foot">
+    <span><img class="pce-in pce-in--xs" src="views/vrt-logo.png" alt="" aria-hidden="true"> VANGUARD RACING TEAM © 2026</span>
+    <span>Recruitment open</span>
+  </div>
+</div>
+
+<div class="scroll-wrap" id="scrollWrap">
+<main>
+
+  <section class="page-hero" id="hero">
+    <div class="hero-bg" data-parallax="0.35" data-scale="1.12"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-vignette"></div>
+    <div class="hero-streak s1"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow"><span class="pulse"></span> THE CAR. THE TEAM. THE TERRAIN.</div>
+      <h1 class="grit">
+        <span><em>GALLERY</em></span>
+        <span><em>COMING SOON</em></span>
+      </h1>
+      <div class="hero-sub">
+        <p>ARJUNA on the dirt, the build in the workshop, the team in the pits. Real photography lands here next.</p>
+      </div>
+    </div>
+    <div class="hero-scroll">Soon</div>
+  </section>
+
+  <section class="sponsor-strip" style="border-bottom:1px solid var(--line);">
+    <div class="sponsor-frame corners" data-reveal>
+      <div>
+        <h3>FRAMES ON <span class="out">THE WAY</span></h3>
+        <p>The gallery grid opens as soon as the ARJUNA shoot and race-day photos are ready. Drop us a message if you have shots of the team worth adding.</p>
+      </div>
+      <a href="https://www.instagram.com/vanguard.racing/" class="btn" data-mag target="_blank" rel="noopener">See what's on Instagram</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-brand">
+    <a class="logo" href="index.html">
+      <img class="pce-mark" src="views/pce-crest.png" alt="Pillai College of Engineering crest" width="22">
+      <img class="vrt-mark" src="views/vrt-logo.png" alt="Vanguard Racing Team logo">
+      <span class="logo-text"><em>Racing Team</em></span>
+    </a>
+    <p class="footer-blurb">The official SAE BAJA team of Pillai College of Engineering. We design, manufacture, and race a student-built All-Terrain Vehicle — ARJUNA.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Explore</h4>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="events.html">Events</a>
+    <a href="sponsors.html">Sponsors</a>
+    <a href="recruitment.html">Recruitment</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-col">
+    <h4>Connect</h4>
+    <a href="https://www.instagram.com/vanguard.racing/" target="_blank" rel="noopener">Instagram — @vanguard.racing</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAapR3twOuhaHGbitiPHfYWnWaaEMR0y3-YcU6i_iXXn2q8g/viewform?usp=header" target="_blank" rel="noopener">Registration form</a>
+    <a href="tel:+919619263350">Vedant Mhatre — 9619263350</a>
+    <a href="tel:+919619603156">Sujay Kadam — 9619603156</a>
+  </div>
+  <div class="footer-bottom">
+    <span class="fb-inline"><img class="pce-in" src="views/vrt-logo.png" alt="" aria-hidden="true">VANGUARD RACING TEAM · EST. 2016 · © 2026 · <img class="pce-in" src="views/pce-crest.png" alt="" aria-hidden="true">PILLAI COLLEGE OF ENGINEERING</span>
+    <span class="legal"><span>Official SAE BAJA team</span><span style="color:var(--accent);">BUILD. RACE. WIN.</span></span>
+  </div>
+</footer>
+
+</div>
+<div class="scroll-spacer" id="scrollSpacer" aria-hidden="true"></div>
+
+<script src="public/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vanguard Racing Team — the official SAE BAJA team of Pillai College of Engineering. We design, manufacture, and race a student-built All-Terrain Vehicle. We are recruiting 2026–27.">
+<meta name="theme-color" content="#08080a">
+<title>Vanguard Racing Team — We Are Recruiting</title>
+<link rel="icon" href="views/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Space+Grotesk:wght@400;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#hero">Skip to content</a>
+
+<!-- ============================================================
+     1. PRELOADER — full-screen on first visit per session.
+        Draws the Vanguard mark, counts to 100, upward wipe.
+        (Logic + session gating live in /public/js/main.js)
+     ============================================================ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-logo">
+    <img src="views/vrt-logo.png" alt="Vanguard Racing Team logo">
+    <div class="preloader-script">Racing Team</div>
+  </div>
+
+  <div class="preloader-meta">
+    <div class="preloader-pct"><span id="preloaderPct">0</span><b>%</b></div>
+    <div class="preloader-bar"><span id="preloaderFill"></span></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     2. CUSTOM CURSOR — dot, lagging ring, contextual "VIEW" label
+     ============================================================ -->
+<div class="cur-dot" id="curDot" aria-hidden="true"></div>
+<div class="cur-ring" id="curRing" aria-hidden="true"></div>
+<div class="cur-label" id="curLabel" aria-hidden="true"><span class="txt">View</span></div>
+
+<!-- ============================================================
+     3. FIXED HEADER — crest + wordmark left, nav right
+     ============================================================ -->
+<header class="site-header" id="siteHeader">
+  <a class="logo" href="index.html" data-mag>
+    <img class="pce-mark" src="views/pce-crest.png" alt="Pillai College of Engineering crest" width="22">
+    <img class="vrt-mark" src="views/vrt-logo.png" alt="Vanguard Racing Team logo">
+    <span class="logo-text"><em>Racing Team</em></span>
+  </a>
+  <nav class="main-nav" aria-label="Primary">
+    <a href="index.html" data-mag>Home</a>
+    <a href="about.html" data-mag>About</a>
+    <a href="#departments" data-mag>Departments</a>
+    <a href="events.html" data-mag>Events</a>
+    <a href="contact.html" data-mag>Contact</a>
+    <a href="recruitment.html" data-mag class="nav-cta">Join</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- Full-screen mobile menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="index.html" data-mag><small>01</small> Home</a>
+  <a href="about.html" data-mag><small>02</small> About</a>
+  <a href="#departments" data-mag><small>03</small> Departments</a>
+  <a href="gallery.html" data-mag><small>04</small> Gallery</a>
+  <a href="events.html" data-mag><small>05</small> Events</a>
+  <a href="sponsors.html" data-mag><small>06</small> Sponsors</a>
+  <a href="contact.html" data-mag><small>07</small> Contact</a>
+  <a href="recruitment.html" data-mag><small>08</small> Join us</a>
+  <div class="mobile-menu-foot">
+    <span><img class="pce-in pce-in--xs" src="views/vrt-logo.png" alt="" aria-hidden="true"> VANGUARD RACING TEAM © 2026</span>
+    <span>Recruitment open</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SCROLL SHELL (progressive enhancement — native if no JS)
+     ============================================================ -->
+<div class="scroll-wrap" id="scrollWrap">
+
+<main>
+
+  <!-- ============================================================
+       4. HERO — "VANGUARD / RACING TEAM (VRT)", red streaks, hard vignette
+       ============================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" data-parallax="0.35" data-scale="1.12"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-vignette"></div>
+    <div class="hero-streak s1"></div>
+    <div class="hero-streak s2"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow"><span class="pulse"></span> <img class="pce-in" src="views/vrt-logo.png" alt="" aria-hidden="true"> VRT — EST. 2016 · <img class="pce-in" src="views/pce-crest.png" alt="" aria-hidden="true"> PCE — OFFICIAL SAE BAJA TEAM</div>
+      <h1 class="grit">
+        <span><em>VANGUARD</em></span>
+        <span><em>RACING TEAM</em></span>
+      </h1>
+      <div class="hero-sub">
+        <p>Think it. Build it. Race it. Vanguard Racing Team (VRT) designs, manufactures, and races a student-built All-Terrain Vehicle — and every department is open for 2026–27.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAapR3twOuhaHGbitiPHfYWnWaaEMR0y3-YcU6i_iXXn2q8g/viewform?usp=header" class="btn primary" data-mag data-magnetic target="_blank" rel="noopener">Register now</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">Scroll</div>
+  </section>
+
+  <!-- ============================================================
+       5. SCROLLING TICKER — BUILD. RACE. WIN. loop
+       ============================================================ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+
+  <!-- ============================================================
+       6. STATS HUD — real, non-invented facts only
+       ============================================================ -->
+  <section class="stats" id="stats">
+    <div class="sec-head" data-reveal>
+      <div>
+        <p class="sec-eyebrow">At a glance</p>
+        <h2>The team —<br><span class="out">by the facts</span></h2>
+      </div>
+      <p>No invented numbers. Just what Vanguard actually is: a student team, an institution, and a season.</p>
+    </div>
+
+    <div class="stats-grid" data-reveal-group>
+      <div class="stat" data-reveal>
+        <span class="tick"></span>
+        <span class="idx">01</span>
+        <div class="stat-num"><span class="num" data-count="10">0</span></div>
+        <div class="rule"></div>
+        <p class="lbl">Departments —<br>core + technical</p>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="tick"></span>
+        <span class="idx">02</span>
+        <div class="stat-num stat-num--text">SAE BAJA</div>
+        <div class="rule"></div>
+        <p class="lbl">Category —<br>all-terrain vehicle</p>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="tick"></span>
+        <span class="idx">03</span>
+        <div class="stat-num stat-num--text stat-num--crest"><img src="views/pce-crest.png" alt="" aria-hidden="true"><span>PCE</span></div>
+        <div class="rule"></div>
+        <p class="lbl">Institution —<br>Pillai College of Engineering</p>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="tick"></span>
+        <span class="idx">04</span>
+        <div class="stat-num stat-num--text">2026–27</div>
+        <div class="rule"></div>
+        <p class="lbl">Season —<br>recruitment now open</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. ARJUNA STAGE — the buggy line-draw (signature moment)
+       ============================================================ -->
+  <section class="stage" id="stage" data-draw>
+    <div class="stage-grid"></div>
+    <div class="car-wrap" data-parallax="0.06">
+      <!-- Line drawing of the off-road buggy. REPLACE with real
+           ARJUNA photography when uploaded to /public/images/. -->
+      <svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" aria-label="ARJUNA — Vanguard all-terrain vehicle silhouette">
+        <!-- ground -->
+        <path class="car-line" d="M30,362 L870,362"/>
+        <!-- rear wheel -->
+        <circle class="car-line" cx="650" cy="330" r="55"/>
+        <circle class="car-line" cx="650" cy="330" r="44"/>
+        <circle class="car-line" cx="650" cy="330" r="13"/>
+        <path class="car-line" d="M705,330 L694,330 M689,369 L675,361 M650,385 L650,374 M611,369 L619,361 M595,330 L606,330 M611,291 L619,299 M650,275 L650,286 M689,291 L675,299"/>
+        <!-- front wheel -->
+        <circle class="car-line" cx="240" cy="330" r="55"/>
+        <circle class="car-line" cx="240" cy="330" r="44"/>
+        <circle class="car-line" cx="240" cy="330" r="13"/>
+        <path class="car-line" d="M295,330 L284,330 M279,369 L265,361 M240,385 L240,374 M201,369 L209,361 M185,330 L196,330 M201,291 L209,299 M240,275 L240,286 M279,291 L265,299"/>
+        <!-- chassis tub (fill) -->
+        <path class="car-fill" d="M170,300 L240,265 L660,265 L730,300 Z"/>
+        <!-- chassis rails + struts -->
+        <path class="car-line" d="M170,300 L730,300"/>
+        <path class="car-line" d="M240,265 L660,265"/>
+        <path class="car-line" d="M200,300 L200,265 M300,265 L300,300 M400,265 L400,300 M500,265 L500,300 M600,265 L600,300"/>
+        <!-- roll cage -->
+        <path class="car-line" d="M280,265 L280,205 L330,168"/>
+        <path class="car-line" d="M330,168 L455,168"/>
+        <path class="car-line" d="M455,168 L472,205 L472,265"/>
+        <path class="car-line" d="M280,205 L455,168"/>
+        <path class="car-line" d="M330,168 L472,205"/>
+        <!-- light bar -->
+        <path class="car-line" d="M268,265 L250,265"/>
+        <!-- spare tire on rear rack -->
+        <circle class="car-line" cx="700" cy="232" r="26"/>
+        <circle class="car-line" cx="700" cy="232" r="12"/>
+        <path class="car-line" d="M730,300 L730,240 L700,232"/>
+        <!-- front suspension -->
+        <path class="car-line" d="M215,285 L178,318"/>
+        <path class="car-line" d="M232,300 L202,332"/>
+        <path class="car-line" d="M178,318 L202,332"/>
+        <path class="car-line" d="M245,265 L250,238 L264,238"/>
+        <path class="car-line" d="M250,238 L198,322"/>
+        <!-- rear suspension -->
+        <path class="car-line" d="M560,300 L622,334"/>
+        <path class="car-line" d="M560,265 L620,330"/>
+        <path class="car-line" d="M700,300 L680,332"/>
+        <path class="car-line" d="M690,285 L664,318"/>
+      </svg>
+      <div class="stat-tag" style="top:6%; left:2%;"><span class="dash"></span> <b>ARJUNA</b>&nbsp;current build</div>
+      <div class="stat-tag" style="top:2%; right:2%; text-align:right; flex-direction:row-reverse;"><span class="dash"></span> <b>SAE BAJA</b>&nbsp;all-terrain</div>
+      <div class="stat-tag" style="bottom:2%; left:4%;"><span class="dash"></span> <img class="pce-in pce-in--xs" src="views/pce-crest.png" alt="" aria-hidden="true"> <b>PCE</b>&nbsp;official team</div>
+      <div class="stat-tag" style="bottom:2%; right:2%; text-align:right; flex-direction:row-reverse;"><span class="dash"></span> <b>STUDENT-BUILT</b>&nbsp;10 departments</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. DEPARTMENTS — two clearly labeled groups
+       ============================================================ -->
+  <section id="departments">
+
+    <!-- Core departments — the build -->
+    <div class="dep-group" data-reveal-group>
+      <div class="dep-head" data-reveal>
+        <h3>CORE <em>DEPARTMENTS</em></h3>
+        <span class="dep-sub">The build — engineering disciplines</span>
+      </div>
+      <div class="dep-grid">
+        <div class="dep" data-reveal>
+          <div class="dep-top">
+            <span class="num">01</span>
+            <span class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8,30 L8,12 L26,12 M8,22 L20,22"/><path d="M26,12 L32,22 L32,30"/><path d="M14,30 L26,30"/><circle cx="12" cy="30" r="3"/><circle cx="28" cy="30" r="3"/><path d="M20,22 L24,18"/></svg></span>
+          </div>
+          <div>
+            <h4>Chassis</h4>
+            <p class="k">Frame, cage &amp; protection</p>
+          </div>
+        </div>
+        <div class="dep" data-reveal>
+          <div class="dep-top">
+            <span class="num">02</span>
+            <span class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="10" y="12" width="20" height="14"/><path d="M10,18 L16,18 M24,18 L30,18 M10,24 L16,24 M24,24 L30,24"/><path d="M16,12 L16,8 M24,12 L24,8"/><circle cx="16" cy="8" r="1.6"/><circle cx="24" cy="8" r="1.6"/><path d="M18,30 L20,26 L22,30"/></svg></span>
+          </div>
+          <div>
+            <h4>Powertrain</h4>
+            <p class="k">Engine &amp; drivetrain</p>
+          </div>
+        </div>
+        <div class="dep" data-reveal>
+          <div class="dep-top">
+            <span class="num">03</span>
+            <span class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8,30 L14,18 L22,30"/><path d="M14,18 L14,10"/><circle cx="14" cy="9" r="2"/><path d="M14,18 L20,30"/><path d="M8,30 L30,30"/><circle cx="11" cy="30" r="2.2"/><circle cx="28" cy="30" r="2.2"/></svg></span>
+          </div>
+          <div>
+            <h4>Vehicle Dynamics</h4>
+            <p class="k">Suspension &amp; handling</p>
+          </div>
+        </div>
+        <div class="dep" data-reveal>
+          <div class="dep-top">
+            <span class="num">04</span>
+            <span class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="20" cy="20" r="11"/><circle cx="20" cy="20" r="4"/><path d="M24,12 L28,8 L31,11 L27,15"/><path d="M20,9 L20,4 M29,14 L34,12"/></svg></span>
+          </div>
+          <div>
+            <h4>Braking</h4>
+            <p class="k">Stopping power</p>
+          </div>
+        </div>
+        <div class="dep" data-reveal>
+          <div class="dep-top">
+            <span class="num">05</span>
+            <span class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="10" y="14" width="20" height="14"/><path d="M14,14 L14,8 L26,8 L26,14"/><path d="M14,22 L20,22 M14,26 L20,26 M24,20 L30,20"/><circle cx="24" cy="24" r="2"/></svg></span>
+          </div>
+          <div>
+            <h4>Electronics</h4>
+            <p class="k">Wiring &amp; control</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical departments — the operations -->
+    <div class="dep-group" data-reveal-group>
+      <div class="dep-head" data-reveal>
+        <h3>TECHNICAL <em>DEPARTMENTS</em></h3>
+        <span class="dep-sub">The operations — media &amp; management</span>
+      </div>
+      <div class="dep-grid">
+        <div class="dep" data-reveal>
+          <div class="dep-top">
+            <span class="num">01</span>
+            <span class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="20" cy="20" r="13"/><path d="M7,20 L33,20 M20,7 C15,12 15,28 20,33 C25,28 25,12 20,7"/></svg></span>
+          </div>
+          <div>
+            <h4>Website</h4>
+            <p class="k">Team site &amp; web</p>
+          </div>
+        </div>
+        <div class="dep" data-reveal>
+          <div class="dep-top">
+            <span class="num">02</span>
+            <span class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14,10 L26,10 L26,34 L14,34 Z"/><path d="M18,10 L18,7 L22,7 L22,10"/><path d="M17,18 L23,18 M17,23 L23,23 M17,28 L21,28"/></svg></span>
+          </div>
+          <div>
+            <h4>Administration</h4>
+            <p class="k">Records &amp; logistics</p>
+          </div>
+        </div>
+        <div class="dep" data-reveal>
+          <div class="dep-top">
+            <span class="num">03</span>
+            <span class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="20" cy="20" r="12"/><path d="M20,32 L20,25 C20,22 22,20 25,20"/><circle cx="13.5" cy="17" r="1.6"/><circle cx="20" cy="12.5" r="1.6"/><circle cx="26.5" cy="17" r="1.6"/></svg></span>
+          </div>
+          <div>
+            <h4>Graphics</h4>
+            <p class="k">Design &amp; livery</p>
+          </div>
+        </div>
+        <div class="dep" data-reveal>
+          <div class="dep-top">
+            <span class="num">04</span>
+            <span class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="20" r="4"/><circle cx="28" cy="12" r="4"/><circle cx="28" cy="28" r="4"/><path d="M16,22 L24,14 M16,18 L24,26"/></svg></span>
+          </div>
+          <div>
+            <h4>Social Media</h4>
+            <p class="k">Content &amp; reach</p>
+          </div>
+        </div>
+        <div class="dep" data-reveal>
+          <div class="dep-top">
+            <span class="num">05</span>
+            <span class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8,17 L8,24 L13,24 L20,29 L20,12 L13,17 Z"/><path d="M8,19 L5,19 M9,22 L6,23"/><path d="M28,13 C31.5,16.5 31.5,24.5 28,28"/><path d="M32,9 C37.5,14 37.5,27 32,32"/></svg></span>
+          </div>
+          <div>
+            <h4>Marketing</h4>
+            <p class="k">Outreach &amp; sponsors</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       9. RECRUITMENT — the current campaign
+       ============================================================ -->
+  <section class="recruit" id="recruit">
+    <div class="recruit-inner corners" data-reveal>
+      <div class="hero-streak s3"></div>
+      <p class="sec-eyebrow" style="justify-content:center;">Recruitment 2026–27</p>
+      <h2 class="grit">WE ARE<br><em>RECRUITING</em></h2>
+      <p class="recruit-sub">Think it. Build it. Race it. Join the team.</p>
+      <p class="recruit-body">Whether you're interested in engineering, design, management, or media, there's a place for you on the team.</p>
+      <div class="recruit-cta">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAapR3twOuhaHGbitiPHfYWnWaaEMR0y3-YcU6i_iXXn2q8g/viewform?usp=header" class="btn primary" data-mag data-magnetic target="_blank" rel="noopener">Register now</a>
+        <a href="#departments" class="btn" data-mag>Explore departments</a>
+      </div>
+      <span class="recruit-camp">Campaign — <b>Recruitment 2026–27</b></span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       10. SEASON / EVENTS PREVIEW — off-road disciplines
+       ============================================================ -->
+  <section class="event" id="events">
+    <div class="sec-head" data-reveal>
+      <div>
+        <p class="sec-eyebrow">Season 2026–27</p>
+        <h2>What we<br><span class="out">race</span></h2>
+      </div>
+      <a class="arrow-link" href="events.html">Season details</a>
+    </div>
+
+    <a class="event-card" href="events.html" data-view data-mag>
+      <div>
+        <span class="event-tag">All-terrain season</span>
+        <div class="event-num">BAJA</div>
+        <h3>Endurance. Hill climb. Rock crawl.</h3>
+        <div class="event-cta">
+          <span class="arrow-link">Season details</span>
+        </div>
+      </div>
+      <dl class="event-meta">
+        <div><dt>Terrain</dt><dd>Endurance · Hill climb · Rock crawl</dd></div>
+        <div><dt>Vehicle</dt><dd>ARJUNA</dd></div>
+        <div><dt>Status</dt><dd>Calendar announced soon</dd></div>
+        <div><dt>Category</dt><dd>SAE BAJA</dd></div>
+      </dl>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       11. SPONSOR STRIP — support the build
+       ============================================================ -->
+  <section class="sponsor-strip" id="sponsor">
+    <div class="sec-head" data-reveal>
+      <div>
+        <p class="sec-eyebrow">Support the build</p>
+        <h2>Sponsor<br><span class="out">Vanguard</span></h2>
+      </div>
+    </div>
+
+    <div class="sponsor-frame corners" data-reveal>
+      <div>
+        <h3>Your brand.<br>Our terrain.</h3>
+        <p>Student-built, student-raced. Partner with us and your brand rides with ARJUNA — on the course, in the pits, and across every channel.</p>
+      </div>
+      <a href="sponsors.html" class="btn" data-mag data-magnetic>Become a sponsor</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       12. CLOSING CTA — become a Vanguard
+       ============================================================ -->
+  <section class="cta" id="cta" data-reveal>
+    <h2 class="grit">BECOME A <span class="out">VANGUARD</span></h2>
+    <p>Build the future. Race with passion. Registration for Recruitment 2026–27 is open across all 10 departments.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAapR3twOuhaHGbitiPHfYWnWaaEMR0y3-YcU6i_iXXn2q8g/viewform?usp=header" class="btn primary" data-mag data-magnetic target="_blank" rel="noopener">Register now</a>
+
+    <div class="contact-strip">
+      <a href="tel:+919619263350" data-mag>
+        <span class="glyph">✆</span>
+        <span><span class="lbl">Vedant Mhatre</span><span class="val">+91 96192 63350</span></span>
+      </a>
+      <a href="tel:+919619603156" data-mag>
+        <span class="glyph">✆</span>
+        <span><span class="lbl">Sujay Kadam</span><span class="val">+91 96196 03156</span></span>
+      </a>
+      <a href="https://www.instagram.com/vanguard.racing/" data-mag target="_blank" rel="noopener">
+        <span class="glyph">@</span>
+        <span><span class="lbl">Instagram</span><span class="val">@vanguard.racing</span></span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="footer-brand">
+    <a class="logo" href="index.html">
+      <img class="pce-mark" src="views/pce-crest.png" alt="Pillai College of Engineering crest" width="22">
+      <img class="vrt-mark" src="views/vrt-logo.png" alt="Vanguard Racing Team logo">
+      <span class="logo-text"><em>Racing Team</em></span>
+    </a>
+    <p class="footer-blurb">The official SAE BAJA team of Pillai College of Engineering. We design, manufacture, and race a student-built All-Terrain Vehicle — ARJUNA.</p>
+  </div>
+
+  <div class="footer-col">
+    <h4>Explore</h4>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="events.html">Events</a>
+    <a href="sponsors.html">Sponsors</a>
+    <a href="recruitment.html">Recruitment</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="footer-col">
+    <h4>The team</h4>
+    <a href="index.html#departments">Departments</a>
+    <a href="about.html">Our institution</a>
+    <a href="gallery.html">ARJUNA</a>
+    <a href="recruitment.html">Join the team</a>
+    <a href="sponsors.html">Partnerships</a>
+  </div>
+
+  <div class="footer-col">
+    <h4>Connect</h4>
+    <a href="https://www.instagram.com/vanguard.racing/" target="_blank" rel="noopener">Instagram — @vanguard.racing</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAapR3twOuhaHGbitiPHfYWnWaaEMR0y3-YcU6i_iXXn2q8g/viewform?usp=header" target="_blank" rel="noopener">Registration form</a>
+    <a href="tel:+919619263350">Vedant Mhatre — 9619263350</a>
+    <a href="tel:+919619603156">Sujay Kadam — 9619603156</a>
+  </div>
+
+  <div class="footer-bottom">
+    <span class="fb-inline"><img class="pce-in" src="views/vrt-logo.png" alt="" aria-hidden="true">VANGUARD RACING TEAM · EST. 2016 · © 2026 · <img class="pce-in" src="views/pce-crest.png" alt="" aria-hidden="true">PILLAI COLLEGE OF ENGINEERING</span>
+    <span class="legal">
+      <span>Official SAE BAJA team</span>
+      <span style="color:var(--accent);">BUILD. RACE. WIN.</span>
+    </span>
+  </div>
+</footer>
+
+</div><!-- /scroll-wrap -->
+
+<!-- Native scroll spacer — active only while smooth scroll is running -->
+<div class="scroll-spacer" id="scrollSpacer" aria-hidden="true"></div>
+
+<script src="public/js/main.js"></script>
+</body>
+</html>
